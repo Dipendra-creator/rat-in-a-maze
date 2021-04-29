@@ -13,8 +13,12 @@ function Maze() {
                 cellList.push(<RatCell key={uuidv1()} />)
                 BoolCellList.push(1)
             }
-            else if (i === 1) {
-                if (j < Math.floor(Math.random()*5)) {
+            else if (i === 3 && j === 3) {
+                cellList.push(<CheeseCell key={uuidv1()} />)
+                BoolCellList.push(1)
+            }
+            else if (i < 4) {
+                if (j === Math.floor(Math.random()*4)) {
                     cellList.push(<NonEmptyCell key={uuidv1()} />)
                     BoolCellList.push(0)
                 }
@@ -22,18 +26,6 @@ function Maze() {
                     cellList.push(<EmptyCell key={uuidv1()}/>)
                     BoolCellList.push(1)
                 }
-            }
-            else if ( i === Math.floor(Math.random()*3)) {
-                cellList.push(<NonEmptyCell key={uuidv1()} />)
-                BoolCellList.push(0)
-            }
-            else if (i === 3 && j === 3) {
-                cellList.push(<CheeseCell key={uuidv1()} />)
-                BoolCellList.push(1)
-            }
-            else {
-                cellList.push(<EmptyCell key={uuidv1()}/>)
-                BoolCellList.push(1)
             }
         }
         BoolMazeList.push({BoolCellList})
