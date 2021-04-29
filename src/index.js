@@ -7,7 +7,6 @@ ReactDOM.render(
         <div className="centered">
             <Maze />
         </div>
-        <p className="centered" > Initial Maze </p>
         <p className="centered" > Total Path = 0</p>
     </div>
     ,
